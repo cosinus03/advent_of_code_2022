@@ -118,9 +118,9 @@ def most_calories_top_three_On(filename: str) -> int:
         if cal != '':
             elf_sum += int(cal)
         else:
-            if elf_sum >= min(elf_sum_list):
-                elf_sum_list.sort()
+            if elf_sum >= elf_sum_list[0]:
                 elf_sum_list[0] = elf_sum
+                elf_sum_list.sort()
             elf_sum = 0
 
     return sum(elf_sum_list)
