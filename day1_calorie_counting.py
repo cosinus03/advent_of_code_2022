@@ -106,3 +106,23 @@ def most_calories_top_three(filename: str) -> int:
     return sum(sorted(elf_sum_list)[-3:])
 
 print("Part Two: ", most_calories_top_three("day1_calorie_input.txt"))
+
+
+def most_calories_top_three_On(filename: str) -> int:
+    cals = (open(filename, "r")).read().splitlines()
+
+    elf_sum_list = [0, 0, 0]
+    elf_sum = 0
+
+    for cal in cals:
+        if cal != '':
+            elf_sum += int(cal)
+        else:
+            if elf_sum >= min(elf_sum_list):
+                elf_sum_list.sort()
+                elf_sum_list[0] = elf_sum
+            elf_sum = 0
+
+    return sum(elf_sum_list)
+
+print("Part Two On: ", most_calories_top_three_On("day1_calorie_input.txt"))
