@@ -1,4 +1,3 @@
-
 INPUT_FILE = "day2_input.txt"
 
 CHOICE_TO_SCORE_MAPPING = {

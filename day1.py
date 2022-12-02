@@ -1,4 +1,3 @@
-
 INPUT_FILE = "day1_input.txt"
 
 
