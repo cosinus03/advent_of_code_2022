@@ -56,6 +56,9 @@ above, this is 24000 (carried by the fourth Elf).
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 """
 
+INPUT_FILE = "day1_calorie_input.txt"
+
+
 def most_calories(filename: str) -> int:
     cals = (open(filename, "r")).read().splitlines()
 
@@ -71,7 +74,7 @@ def most_calories(filename: str) -> int:
 
     return max_elf_sum
 
-print("Part One: ", most_calories("day1_calorie_input.txt"))
+print("Part One: ", most_calories(INPUT_FILE))
 
 """
 --- Part Two ---
@@ -90,6 +93,7 @@ Find the top three Elves carrying the most Calories. How many Calories are those
 in total?
 """
 
+
 def most_calories_top_three(filename: str) -> int:
     cals = (open(filename, "r")).read().splitlines()
 
@@ -105,7 +109,7 @@ def most_calories_top_three(filename: str) -> int:
 
     return sum(sorted(elf_sum_list)[-3:])
 
-print("Part Two: ", most_calories_top_three("day1_calorie_input.txt"))
+print("Part Two: ", most_calories_top_three(INPUT_FILE))
 
 
 def most_calories_top_three_On(filename: str) -> int:
@@ -125,4 +129,4 @@ def most_calories_top_three_On(filename: str) -> int:
 
     return sum(elf_sum_list)
 
-print("Part Two On: ", most_calories_top_three_On("day1_calorie_input.txt"))
+print("Part Two On: ", most_calories_top_three_On(INPUT_FILE))
