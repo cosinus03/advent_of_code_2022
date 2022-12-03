@@ -30,7 +30,7 @@ print("Part One:", common_items_sum(INPUT_FILE))
 
 
 def get_badge(string1: str, string2: str, string3: str) -> str:
-    return set(string1).intersection(set(string2)).intersection(set(string3)).pop()
+    return set(string1).intersection(set(string2), set(string3)).pop()
 
 
 def badge_sum(filename: str) -> int:
